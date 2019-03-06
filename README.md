@@ -357,3 +357,53 @@ Output: favoritetreeever
 Input: one word
 Output: oneword
 ```
+
+
+### 25. Using code, please demonstrate an asynchronous call in JavaScript?
+
+### 26. Write a function that takes in an input array and returns an output array duplicate of the input, but reversed.
+```
+Ex:
+Input: [1, 2, 3, 4, 5]
+Output: [1, 2, 3, 4, 5, 5, 4, 3, 2, 1]
+```
+
+
+### 27. Write a function that takes in an input array and returns unique items in an array.
+```
+Ex:
+Input: [1, 3, 3, 4, 5, 1, 6, 1]
+Output: [4, 5, 6]
+```
+
+
+### 28. There is a button on the page, when you click it the page is non-responsive and the pinwheel starts spinning, how do you go about debugging this?
+
+
+### 29. How to change value of y in let x = { a:1, b: [{ c: 1 },{ y: 2 }] };
+
+
+### 30. Write a function to convert string 'I love JS' to 'JS love I'.
+
+
+### 31. Solve the issue in the following example:
+```js
+let profile = {
+  name: 'Alex',
+  getName() {
+    let innerGetName = function(){
+      return this.name;
+    }
+    return innerGetName();
+  }
+};
+
+
+console.log(profile.getName());
+```
+
+
+### 32. Make the following statement work:
+```js
+[1,2,3,4,5].duplicator(); // should return [1,2,3,4,5,1,2,3,4,5]
+```
