@@ -65,8 +65,10 @@ Output: 0
 ```
 
 
-### 5. Write a function that takes in a single word as a string and returns true if it’s a palindrome and false otherwise (a palindrome is spelled the same way forwards and backwards).
+### 5. Write a function that takes in a single word as a string and returns true if it’s a palindrome and false otherwise.
 ```
+Palindrome: a word that is spelled the same way forwards and backwards.
+
 Ex:
 Input: "noon"
 Output: true
@@ -78,3 +80,132 @@ Input: "racecar"
 Output: true
 ```
 
+### 6. Write a function that takes in a sentence as a string and outputs the number of words.
+```
+Ex:
+Input: “let’s go!”
+Output: 2
+
+Input: “I can’t wait to start coding”
+Output: 6
+
+Input: “huh?”
+Output: 1
+```
+
+
+### 7. Write a function that takes in an array of numbers and outputs the average of all the numbers.
+```
+Ex:
+Input: [ 1 , 4 , 7 ]
+Output: 4
+
+Input: [ 10, 5 ]
+Output: 7.5
+
+Input: [ 1.5, 3, 2.5, 1 ]
+Output: 2
+```
+
+
+### 8. Run the following code and explain the output:
+```js
+var sample = function(){
+    var a = b = 3;
+}
+sample();
+console.log("Is a defined?", typeof a !== "undefined");
+console.log("Is b defined?", typeof b !== "undefined");
+```
+* This is a bit different from the problems above.
+  * There are a few different types of interview problems that you'll see as a developer. 
+  * Some focus on logic, like the ones we've seen so far, and some focus on measuring understanding of the language.
+  * JavaScript has a lot of quirks that make it unique from other languages. Understanding those quirks will make you a stronger JavaScript developer. 
+
+
+### 10. Write a function that takes in an input and returns true if it’s an integer and false otherwise.
+```
+Ex:
+Input: "7"
+Output: false
+
+Input: 7
+Output: true
+
+Input: 4.3
+Output: false
+```
+
+
+### 11. Write a function that takes an array of integers as an input and outputs the first duplicate.
+```
+Ex:
+Input: [ 2, 5, 6, 3, 5 ]
+Output: 5
+
+Input: [ 1, 3, 4, 1, 3, 4 ]
+Output: 1
+
+Input: [ 2, 4, 5 ]
+Output: undefined
+```
+
+
+### 12. Write a function that takes in a string and returns true if it’s a pangram or false otherwise.
+```
+Pangram: a sentence that contains every letter in the alphabet.
+
+Ex:
+Input: “Watch Jeopardy, Alex Trebek’s fun TV quiz game”
+Output: true
+
+Input: “Five hexing wizard bots jump quickly”
+Output: true
+
+Input: “JavaScript is the best”
+Output: false
+```
+
+
+### 13. Without running the code, determine what the following code will output and why:
+```js
+var a = 1;
+function outer(){
+	var a = 2;
+	function inner(){
+		a++;
+    console.log(a);
+		var a = 5;
+	}
+	inner();
+}
+outer();
+```
+
+
+### 14. Write a function that takes in a number and returns the corresponding day of the week.
+```
+Ex:
+Input: 1
+Output: 'Monday'
+
+Input: 5
+Output: 'Friday'
+
+Input: 8
+Output: undefined
+```
+
+
+### 15. Write a function that takes in an array of integers and the array with duplicates removed.
+```
+Ex:
+Input: [1,2,2,3]
+Output: [1,2,3]
+
+Input: [4,5,4,4,7,5]
+Output: [4,5,7]
+
+Input: [1,2,3,5]
+Output: [1,2,3,5]
+```
