@@ -292,3 +292,68 @@ Input: [1,2,3]  function(num) { return num - 2 }
 Output: [-1, 0, 1]
 ```
 
+
+### 20. Write a function that takes an array of numbers and a function as parameters. The function parameter should return true if the input meets a certain condition or false otherwise. Your function should return true if the function parameter returns true for _any_ of the array elements in the array parameter or false otherwise. 
+```
+Ex:
+
+Input: [1,2,3]  function(num) { return num === 2 }
+Output: true
+
+Input: [1,5,3]  function(num) { return num === 2 }
+Output: false
+
+Input: [1,2,3]  function(num) { return num % 2 === 0 }
+Output: true
+
+Input: [1,5,3]  function(num) { return num % 2 === 0 }
+Output: false
+```
+
+
+### 21. Write a function that takes an array of numbers and a function as parameters. The function parameter should return true if the input meets a certain condition or false otherwise. Your function should run the function parameter on every element in the array parameter and, if it returns true, add the element to a new array. Return the new array.
+```js
+Ex:
+Input: [1,2,3]  function(num){return num === 2}
+Output: [2]
+
+Input: [1,2,3,4,5,6]  function(num){return num % 2 === 0}
+Output: [2,4,6]
+
+Input: [1,2,3,4,5,6]  function(num){return num > 3}
+Output: [4,5,6]
+```
+
+
+### 22. What is a JavaScript Prototype?
+* There are multiple kinds of interview questions. We've largely practiced coding problems, but you should expect to encounter discussion problems as well.
+
+* Don't copy a definition from a Google Search, but instead read several articles and come up with your own definition.
+
+
+### 23. Write a function that takes in a number and reverses the order of the digits.
+```
+Ex:
+Input: 1234
+Output:4321
+
+Input: 1201
+Output:1021
+
+Input: 4
+Output: 4
+```
+
+
+### 24. Write a function that takes in a string and and returns the string with white space removed and all letters changed to lowercase. This is a common task when a variable, routeName, etc needs to be created from user input.
+```
+Ex:
+Input: Alper Gokcehan
+Output: alpergokcehan
+
+Input:    favorite tree    ever
+Output: favoritetreeever
+
+Input: one word
+Output: oneword
+```
