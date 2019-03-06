@@ -123,7 +123,7 @@ console.log("Is b defined?", typeof b !== "undefined");
   * JavaScript has a lot of quirks that make it unique from other languages. Understanding those quirks will make you a stronger JavaScript developer. 
 
 
-### 10. Write a function that takes in an input and returns true if it’s an integer and false otherwise.
+### 9. Write a function that takes in an input and returns true if it’s an integer and false otherwise.
 ```
 Ex:
 Input: "7"
@@ -137,7 +137,7 @@ Output: false
 ```
 
 
-### 11. Write a function that takes an array of integers as an input and outputs the first duplicate.
+### 10. Write a function that takes an array of integers as an input and outputs the first duplicate.
 ```
 Ex:
 Input: [ 2, 5, 6, 3, 5 ]
@@ -151,7 +151,7 @@ Output: undefined
 ```
 
 
-### 12. Write a function that takes in a string and returns true if it’s a pangram or false otherwise.
+### 11. Write a function that takes in a string and returns true if it’s a pangram or false otherwise.
 ```
 Pangram: a sentence that contains every letter in the alphabet.
 
@@ -167,7 +167,7 @@ Output: false
 ```
 
 
-### 13. Without running the code, determine what the following code will output and why:
+### 12. Without running the code, determine what the following code will output and why:
 ```js
 var a = 1;
 function outer(){
@@ -183,7 +183,7 @@ outer();
 ```
 
 
-### 14. Write a function that takes in a number and returns the corresponding day of the week.
+### 13. Write a function that takes in a number and returns the corresponding day of the week.
 ```
 Ex:
 Input: 1
@@ -197,7 +197,7 @@ Output: undefined
 ```
 
 
-### 15. Write a function that takes in an array of integers and the array with duplicates removed.
+### 14. Write a function that takes in an array of integers and the array with duplicates removed.
 ```
 Ex:
 Input: [1,2,2,3]
@@ -209,3 +209,86 @@ Output: [4,5,7]
 Input: [1,2,3,5]
 Output: [1,2,3,5]
 ```
+
+
+### 15. Write a function that takes a string as a parameter and determines if it is a valid password with the following constraints:
+```
+1. It must be at least 8 characters long
+2. It must contain at least 1 capital letter
+3. It must contain at least 1 lower case letter
+
+Output true if the string is a valid password or false otherwise. 
+
+Ex:
+Input: RexTheDog
+Output: true
+
+Input: rexthedog
+Output: false
+
+Input: REXTHEDOG
+Output: false
+
+Input: Dog
+Output: false
+```
+
+
+### 16. Write a function that takes in a string and if the string is a string representation of a number, return the negative version of that number otherwise throw an Error.
+```
+Ex:
+Input: '1'
+Output: -1
+
+Input: '4'
+Output: -4
+
+Input: 'cow'
+Error
+ ```
+
+
+### 17. Write a function that takes 2 parameters - the first is an array, the second is an element that may or may not be in the array. Without using any built in array methods, return true if the element is in the array or false otherwise.
+```
+Ex:
+Input: [1,2,3]  1
+Output: true
+
+Input: [1,2,3]  4
+Output: false
+
+Input: ['code', 'dev', 'nerd']  'nerd'
+Output: false
+
+Input: ['code', 'dev', 'nerd']  'genius'
+Output: false
+```
+ 
+
+### 18. Write a function that takes an array of numbers and returns an array with each number doubled.
+```
+Ex:
+Input: [1,2,3]
+Output: [2,4,6]
+
+Input: [-1,-2,-3]
+Output: [-2, -4, -6]
+```
+
+
+### 19. Write a function that takes an array of numbers and a function as parameters. The function paremeter should do something to a numbers (increment, double, decrement, etc) and return the result. Your function should return the array that results from applying the function parameter to each element in the number array. 
+```
+Ex:
+Input: [1,2,3]  function(num) { return num * 2 }
+Output: [2,4,6]
+
+Input: [1,2,3]  function(num) { return num + 1 }
+Output: [2,3,4]
+
+Input: [1,2,3]  function(num) { return num / 2 }
+Output: [.5, 1. 1.5]
+
+Input: [1,2,3]  function(num) { return num - 2 }
+Output: [-1, 0, 1]
+```
+
