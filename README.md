@@ -382,14 +382,16 @@ Output: [4, 5, 6]
 ### 28. There is a button on the page, when you click it the page is non-responsive and the pinwheel starts spinning, how do you go about debugging this?
 
 
-### 29. How to change value of y in the below object:
+### 29. How to change the value of y in the object below:
 ```js
 let x = { a: 1, b: [{ c: 1 }, { y: 2 }] };
 ```
 
 
-### 30. Write a function to convert string 'I love JS' to 'JS love I'.
-
+### 30. Make the following function work:
+```js
+flipSentence('I love JS');  // should return 'JS love I'
+```
 
 ### 31. Solve the issue in the following example:
 ```js
