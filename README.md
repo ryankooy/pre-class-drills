@@ -17,18 +17,23 @@ Output: 3.4
 * Start with the function expression, write the function and test it out with the sample inputs and outputs provided: 
 
 ```js
-  var max = function(num1, num2){
+var max = function(num1, num2) {
 
-  };
+};
 ```
 
 <details><summary><b>Answer</b></summary>
 <p>
 
 ```js
-  var max = function(num1, num2){
-
-  };
+var max = function(num1, num2) {
+  if (num1 > num2) {
+    return num1;
+  }
+  else {
+    return num2;
+  }
+};
 ```
 
 </p>
@@ -51,7 +56,13 @@ Output: 55
 <p>
 
 ```js
-  
+var totalSum = function (num) {
+  var sum = 0;
+  for (var i = 0; i <= num; i++) {
+    sum += i;
+  }
+  return sum;
+}
 ```
 
 </p>
@@ -74,7 +85,15 @@ Output: 3
 <p>
 
 ```js
-  
+var findMax = function (numArr) {
+  var maxNum = numArr[0];
+  for (var i = 1; i < numArr.length; i++) {
+    if (numArr[i] > maxNum) {
+      maxNum = numArr[i];
+    }
+  }
+  return maxNum;
+}
 ```
 
 </p>
@@ -97,7 +116,17 @@ Output: 0
 <p>
 
 ```js
-  
+var countVowels = function(str) {
+  var count = 0;
+  var input = str.toLowerCase();
+  var vowelArr = [“a”, “e”, “i”, “o”, “u”];
+  for (var i = 0; i < input.length; i++) {
+    if(vowelArr.includes(input[i])) {
+      count++;
+    }
+  }
+  return count;
+}
 ```
 
 </p>
@@ -122,30 +151,91 @@ Output: true
 <p>
 
 ```js
-  
+// 1. loop through the string.
+// 2. compare the first and last letters and return false if not equal.
+// 3. compare the second and second from last letters and return false if not equal.
+// 4. continue in this manner until all letters are checked. 
+// 5. after all letters are checked, return true.
+var isPalindrome = function (str) {
+  for (var i = 0; i < str.length; i++) {
+    if (str[i] !== str[str.length - (i + 1)]) {
+      return false;
+    }
+  }
+  return true;
+}
+
+// or
+
+var isPalindrome = function (str) {
+  return str.split("").reverse().join("") === str;
+}
 ```
 
 </p>
 </details>
 
-### 6. Write a function that takes in a sentence as a string and outputs the number of words.
+### 6. Write a function that takes in a string and outputs the *first* occurrence of a character that does not repeat itself in that string.
+
 ```
 Ex:
-Input: “let’s go!”
-Output: 2
+Input: “the quick brown fox jumps over the calm kitten quietly”
+Output: "b"
 
-Input: “I can’t wait to start coding”
-Output: 6
+Input: “this hat is the greatest!”
+Output: "g"
 
-Input: “huh?”
-Output: 1
+Input: “what a wonderful day it has been!”
+Output: "o"
 ```
 
 <details><summary><b>Answer</b></summary>
 <p>
 
 ```js
-  
+// 1. loop through each character in the string, initializing a count variable at 0.
+// 2. assign the variable char to its corresponding character in our string.
+// 3. loop through the array, incrementing the count variable every time we see the same character from our first for loop.
+// 4. check to see if the count for each character is one and return the character if that is the case.
+function firstNonRepeatChar(str) {
+  for (var i = 0; i < str.length; i++) {
+    var char = str[i];
+    var count = 0;
+    
+    for (var j = 0; j < str.length; j++) {
+      if (str[j] === char) {
+        count++;
+      }
+    }
+
+    if (count === 1) {
+      return char;
+    }
+  }
+}
+
+// more efficient version:
+// 1. create a new object and then create a key corresponding to each different character in our string. The value will be set to be the total number of times that character appears in our string.
+// 2. as we iterate through our input string, every time we encounter an additional occurrence of a string, we increment its value in the charCount object by one.
+// 3. once the string has been iterated through, we loop through each key in our charCount object, returning the first time we encounter a value of 1.
+// 4. it is important to understand that both solutions are correct, but in its worst case, the first solution has a worse time complexity. this is because it takes longer to iterate through a loop inside a loop (O(n^2)) than it does to iterate through that same loop twice (O(2n)).
+function firstNonRepeatChar(str) {
+  var charCount = {};
+  for (var i = 0; i < str.length; i++) {
+    var char = str[i];
+    if (charCount[char]) {
+      charCount[char]++;
+    }
+    else {
+      charCount[char] = 1;
+    }
+  }
+  for (var j in charCount) {
+    if (charCount[j] === 1) {
+      return j;
+    }
+  }
+}  
 ```
 
 </p>
@@ -168,7 +258,24 @@ Output: 2
 <p>
 
 ```js
-  
+var average = function (numArr) {
+  var sum = 0;
+  for (var i = 0; i < numArr.length; i++){
+    sum += numArr[i];
+  }
+  return sum / numArr.length;
+}
+
+// with reduce:
+var average = function (numArr) {
+  var sum = numArr.reduce(function(a, b) {
+    return a + b;
+  }, 0);
+  return sum / numArr.length;
+}
+
+// with es6:
+const average = arr => arr.reduce((a,b) => a + b, 0) / arr.length;
 ```
 
 </p>
@@ -176,10 +283,12 @@ Output: 2
 
 ### 8. Run the following code and explain the output:
 ```js
-var sample = function(){
-    var a = b = 3;
+var sample = function() {
+  var a = b = 3;
 }
+
 sample();
+
 console.log("Is a defined?", typeof a !== "undefined");
 console.log("Is b defined?", typeof b !== "undefined");
 ```
@@ -191,9 +300,18 @@ console.log("Is b defined?", typeof b !== "undefined");
 <details><summary><b>Answer</b></summary>
 <p>
 
+`var a = b = 3` is equivalent to writing:
 ```js
-  
+b = 3;
+var a = b; 
 ```
+
+* This means that b is created globally (unless you use strict mode) because there is no var keyword in the variable definition.
+
+* After b is created globally, b is assigned the value 3. Then a is created locally inside the function and assigned the value of b, which is 3.
+
+* Because a is created locally, it doesn’t exist outside the function.
+
 
 </p>
 </details>
