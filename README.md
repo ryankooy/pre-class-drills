@@ -119,7 +119,7 @@ Output: 0
 var countVowels = function(str) {
   var count = 0;
   var input = str.toLowerCase();
-  var vowelArr = [“a”, “e”, “i”, “o”, “u”];
+  var vowelArr = ["a", "e", "i", "o", "u"];
   for (var i = 0; i < input.length; i++) {
     if(vowelArr.includes(input[i])) {
       count++;
@@ -312,7 +312,6 @@ var a = b;
 
 * Because a is created locally, it doesn’t exist outside the function.
 
-
 </p>
 </details>
 
@@ -333,7 +332,13 @@ Output: false
 <p>
 
 ```js
-  
+var isInt = function (input) {
+  return parseInt(input) === input;
+}
+// this is preferable since the first one actually won't work for very large numbers because of the way parseInt works under the hood.
+var isInt = function (input) {
+  return Math.floor(input) === input;
+}
 ```
 
 </p>
@@ -356,7 +361,31 @@ Output: undefined
 <p>
 
 ```js
-  
+var findDup = function (arr) {
+  for (var i = 0; i < arr.length; i++) {
+    for (var j = 0; j < i; j++) {
+      if(arr[i] === arr[j]) {
+        return arr[i];
+      }
+    } 
+  }
+}
+
+// or, more efficient version:
+var firstDup = function(arr){
+  var dups = {};
+  for (var i = 0; i < arr.length; i++) {
+    var val = arr[i]
+    if (dups[val]) {
+      return val;
+    }
+    else{
+      dups[val] = true;
+    }
+  }
+}
+// the second one is more efficient because it only loops through the values once.
+// nested for loops loop through all the elements one time for each element in the array.
 ```
 
 </p>
@@ -381,7 +410,17 @@ Output: false
 <p>
 
 ```js
-  
+var isPangram = function (str) {
+  str = str.toLowerCase();
+  var alphabet = "abcdefghijklmnopqrstuvwxyz";
+
+  for (var i = 0; i < alphabet.length; i++) {
+    if (!str.includes(alphabet[i])){
+      return false;
+    }
+  }
+  return true;
+}
 ```
 
 </p>
@@ -407,9 +446,15 @@ outer();
 <details><summary><b>Answer</b></summary>
 <p>
 
-```js
-  
-```
+* The output will be `NaN`.
+
+* Inside `inner` we have declared a variable `a` with the `var` keyword, so when we reference `a` inside of `inner`, it will always look to that `a` - not the one declared in outer or globally.
+
+* We are referencing `a` twice before it is declared, but that does not give us a reference error.
+
+* In JavaScript, variable declarations are hoisted, meaning var `a` is essentially moved to the top line of the function, but the assignment = 5 is not. So `a` is declared but has `a` value of `undefined` until the line `var a = 5;` is run.
+
+* `undefined` is not a number so performing a mathematical operation on it, like the post-increment operation `++`, will result in a value of `NaN`.
 
 </p>
 </details>
