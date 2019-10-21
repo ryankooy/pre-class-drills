@@ -22,6 +22,17 @@ Output: 3.4
   };
 ```
 
+<details><summary><b>Answer</b></summary>
+<p>
+
+```js
+  var max = function(num1, num2){
+
+  };
+```
+
+</p>
+</details>
 
 ### 2. Write a function that takes in an integer and outputs the sum of all the numbers from 1 to that integer.
 ```
@@ -36,6 +47,15 @@ Input: 10
 Output: 55
 ```
 
+<details><summary><b>Answer</b></summary>
+<p>
+
+```js
+  
+```
+
+</p>
+</details>
 
 ### 3. Write a function that takes in an array of numbers and outputs the maximum number.
 ```
@@ -50,6 +70,15 @@ Input: [ 3, 3, 3 ]
 Output: 3
 ```
 
+<details><summary><b>Answer</b></summary>
+<p>
+
+```js
+  
+```
+
+</p>
+</details>
 
 ### 4. Write a function that takes in a string and outputs the number of vowels (not counting y).
 ```
@@ -64,6 +93,15 @@ Input: "why?"
 Output: 0
 ```
 
+<details><summary><b>Answer</b></summary>
+<p>
+
+```js
+  
+```
+
+</p>
+</details>
 
 ### 5. Write a function that takes in a single word as a string and returns true if it’s a palindrome and false otherwise.
 ```
@@ -80,6 +118,16 @@ Input: "racecar"
 Output: true
 ```
 
+<details><summary><b>Answer</b></summary>
+<p>
+
+```js
+  
+```
+
+</p>
+</details>
+
 ### 6. Write a function that takes in a sentence as a string and outputs the number of words.
 ```
 Ex:
@@ -93,6 +141,15 @@ Input: “huh?”
 Output: 1
 ```
 
+<details><summary><b>Answer</b></summary>
+<p>
+
+```js
+  
+```
+
+</p>
+</details>
 
 ### 7. Write a function that takes in an array of numbers and outputs the average of all the numbers.
 ```
@@ -107,6 +164,15 @@ Input: [ 1.5, 3, 2.5, 1 ]
 Output: 2
 ```
 
+<details><summary><b>Answer</b></summary>
+<p>
+
+```js
+  
+```
+
+</p>
+</details>
 
 ### 8. Run the following code and explain the output:
 ```js
@@ -122,6 +188,15 @@ console.log("Is b defined?", typeof b !== "undefined");
   * Some focus on logic, like the ones we've seen so far, and some focus on measuring understanding of the language.
   * JavaScript has a lot of quirks that make it unique from other languages. Understanding those quirks will make you a stronger JavaScript developer. 
 
+<details><summary><b>Answer</b></summary>
+<p>
+
+```js
+  
+```
+
+</p>
+</details>
 
 ### 9. Write a function that takes in an input and returns true if it’s an integer and false otherwise.
 ```
@@ -136,6 +211,15 @@ Input: 4.3
 Output: false
 ```
 
+<details><summary><b>Answer</b></summary>
+<p>
+
+```js
+  
+```
+
+</p>
+</details>
 
 ### 10. Write a function that takes an array of integers as an input and outputs the first duplicate.
 ```
@@ -150,6 +234,15 @@ Input: [ 2, 4, 5 ]
 Output: undefined
 ```
 
+<details><summary><b>Answer</b></summary>
+<p>
+
+```js
+  
+```
+
+</p>
+</details>
 
 ### 11. Write a function that takes in a string and returns true if it’s a pangram or false otherwise.
 ```
@@ -166,6 +259,15 @@ Input: “JavaScript is the best”
 Output: false
 ```
 
+<details><summary><b>Answer</b></summary>
+<p>
+
+```js
+  
+```
+
+</p>
+</details>
 
 ### 12. Without running the code, determine what the following code will output and why:
 ```js
@@ -184,6 +286,15 @@ function outer(){
 outer();
 ```
 
+<details><summary><b>Answer</b></summary>
+<p>
+
+```js
+  
+```
+
+</p>
+</details>
 
 ### 13. Write a function that takes in a number and returns the corresponding day of the week.
 ```
@@ -198,6 +309,15 @@ Input: 8
 Output: undefined
 ```
 
+<details><summary><b>Answer</b></summary>
+<p>
+
+```js
+  
+```
+
+</p>
+</details>
 
 ### 14. Write a function that takes in an array of integers and the array with duplicates removed.
 ```
@@ -212,6 +332,15 @@ Input: [1,2,3,5]
 Output: [1,2,3,5]
 ```
 
+<details><summary><b>Answer</b></summary>
+<p>
+
+```js
+  
+```
+
+</p>
+</details>
 
 ### 15. Write a function that takes a string as a parameter and determines if it is a valid password with the following constraints:
 ```
@@ -235,6 +364,15 @@ Input: Dog
 Output: false
 ```
 
+<details><summary><b>Answer</b></summary>
+<p>
+
+```js
+  
+```
+
+</p>
+</details>
 
 ### 16. Write a function that takes in a string and if the string is a string representation of a number, return the negative version of that number otherwise throw an Error.
 ```
@@ -249,6 +387,15 @@ Input: 'cow'
 Error
  ```
 
+<details><summary><b>Answer</b></summary>
+<p>
+
+```js
+  
+```
+
+</p>
+</details>
 
 ### 17. Write a function that takes 2 parameters - the first is an array, the second is an element that may or may not be in the array. Without using any built in array methods, return true if the element is in the array or false otherwise.
 ```
@@ -265,7 +412,16 @@ Output: false
 Input: ['code', 'dev', 'nerd']  'genius'
 Output: false
 ```
- 
+
+<details><summary><b>Answer</b></summary>
+<p>
+
+```js
+  
+```
+
+</p>
+</details>
 
 ### 18. Write a function that takes an array of numbers and returns an array with each number doubled.
 ```
@@ -277,6 +433,15 @@ Input: [-1,-2,-3]
 Output: [-2, -4, -6]
 ```
 
+<details><summary><b>Answer</b></summary>
+<p>
+
+```js
+  
+```
+
+</p>
+</details>
 
 ### 19. Write a function that takes an array of numbers and a function as parameters. The function paremeter should do something to a numbers (increment, double, decrement, etc) and return the result. Your function should return the array that results from applying the function parameter to each element in the number array. 
 ```
@@ -294,6 +459,15 @@ Input: [1,2,3]  function(num) { return num - 2 }
 Output: [-1, 0, 1]
 ```
 
+<details><summary><b>Answer</b></summary>
+<p>
+
+```js
+  
+```
+
+</p>
+</details>
 
 ### 20. Write a function that takes an array of numbers and a function as parameters. The function parameter should return true if the input meets a certain condition or false otherwise. Your function should return true if the function parameter returns true for _any_ of the array elements in the array parameter or false otherwise. 
 ```
@@ -312,6 +486,15 @@ Input: [1,5,3]  function(num) { return num % 2 === 0 }
 Output: false
 ```
 
+<details><summary><b>Answer</b></summary>
+<p>
+
+```js
+  
+```
+
+</p>
+</details>
 
 ### 21. Write a function that takes an array of numbers and a function as parameters. The function parameter should return true if the input meets a certain condition or false otherwise. Your function should run the function parameter on every element in the array parameter and, if it returns true, add the element to a new array. Return the new array.
 ```js
@@ -326,6 +509,15 @@ Input: [1,2,3,4,5,6]  function(num){return num > 3}
 Output: [4,5,6]
 ```
 
+<details><summary><b>Answer</b></summary>
+<p>
+
+```js
+  
+```
+
+</p>
+</details>
 
 ### 22. What is a JavaScript Prototype?
 * There are multiple kinds of interview questions. We've largely practiced coding problems, but you should expect to encounter discussion problems as well.
@@ -346,6 +538,15 @@ Input: 4
 Output: 4
 ```
 
+<details><summary><b>Answer</b></summary>
+<p>
+
+```js
+  
+```
+
+</p>
+</details>
 
 ### 24. Write a function that takes in a string and and returns the string with white space removed and all letters changed to lowercase. This is a common task when a variable, routeName, etc needs to be created from user input.
 ```
@@ -360,6 +561,15 @@ Input: one word
 Output: oneword
 ```
 
+<details><summary><b>Answer</b></summary>
+<p>
+
+```js
+  
+```
+
+</p>
+</details>
 
 ### 25. Using code, please demonstrate an asynchronous call in JavaScript?
 
@@ -370,6 +580,15 @@ Input: [1, 2, 3, 4, 5]
 Output: [1, 2, 3, 4, 5, 5, 4, 3, 2, 1]
 ```
 
+<details><summary><b>Answer</b></summary>
+<p>
+
+```js
+  
+```
+
+</p>
+</details>
 
 ### 27. Write a function that takes in an input array and returns the unique items in an array.
 ```
@@ -378,22 +597,47 @@ Input: [1, 3, 3, 4, 5, 1, 6, 1]
 Output: [4, 5, 6]
 ```
 
+<details><summary><b>Answer</b></summary>
+<p>
 
-### 28. There is a button on the page, when you click it the page is non-responsive and the pinwheel starts spinning, how do you go about debugging this?
+```js
+  
+```
 
+</p>
+</details>
 
-### 29. How to change the value of y in the object below:
+### 28. How to change the value of y in the object below:
 ```js
 let x = { a: 1, b: [{ c: 1 }, { y: 2 }] };
 ```
 
+<details><summary><b>Answer</b></summary>
+<p>
 
-### 30. Make the following function work:
+```js
+  
+```
+
+</p>
+</details>
+
+### 29. Make the following function work:
 ```js
 flipSentence('I love JS');  // should return 'JS love I'
 ```
 
-### 31. Solve the issue in the following example:
+<details><summary><b>Answer</b></summary>
+<p>
+
+```js
+  
+```
+
+</p>
+</details>
+
+### 30. Solve the issue in the following example:
 ```js
 let profile = {
   name: 'Alex',
@@ -409,8 +653,27 @@ let profile = {
 console.log(profile.getName());
 ```
 
+<details><summary><b>Answer</b></summary>
+<p>
 
-### 32. Make the following statement work:
+```js
+  
+```
+
+</p>
+</details>
+
+### 31. Make the following statement work:
 ```js
 [1,2,3,4,5].duplicator(); // should return [1,2,3,4,5,1,2,3,4,5]
 ```
+
+<details><summary><b>Answer</b></summary>
+<p>
+
+```js
+  
+```
+
+</p>
+</details>
