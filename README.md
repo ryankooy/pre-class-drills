@@ -62,7 +62,7 @@ var totalSum = function (num) {
     sum += i;
   }
   return sum;
-}
+};
 ```
 
 </p>
@@ -93,7 +93,7 @@ var findMax = function (numArr) {
     }
   }
   return maxNum;
-}
+};
 ```
 
 </p>
@@ -126,7 +126,7 @@ var countVowels = function(str) {
     }
   }
   return count;
-}
+};
 ```
 
 </p>
@@ -163,13 +163,13 @@ var isPalindrome = function (str) {
     }
   }
   return true;
-}
+};
 
 // or
 
 var isPalindrome = function (str) {
   return str.split("").reverse().join("") === str;
-}
+};
 ```
 
 </p>
@@ -212,7 +212,7 @@ function firstNonRepeatChar(str) {
       return char;
     }
   }
-}
+};
 
 // more efficient version:
 // 1. create a new object and then create a key corresponding to each different character in our string. The value will be set to be the total number of times that character appears in our string.
@@ -235,7 +235,7 @@ function firstNonRepeatChar(str) {
       return j;
     }
   }
-}  
+};
 ```
 
 </p>
@@ -264,7 +264,7 @@ var average = function (numArr) {
     sum += numArr[i];
   }
   return sum / numArr.length;
-}
+};
 
 // with reduce:
 var average = function (numArr) {
@@ -272,7 +272,7 @@ var average = function (numArr) {
     return a + b;
   }, 0);
   return sum / numArr.length;
-}
+};
 
 // with es6:
 const average = arr => arr.reduce((a,b) => a + b, 0) / arr.length;
@@ -285,7 +285,7 @@ const average = arr => arr.reduce((a,b) => a + b, 0) / arr.length;
 ```js
 var sample = function() {
   var a = b = 3;
-}
+};
 
 sample();
 
@@ -334,13 +334,13 @@ Output: false
 ```js
 var isInt = function (input) {
   return parseInt(input) === input;
-}
+};
 
 // this is preferable since the first one actually won't work for very large numbers 
 // because of the way parseInt works under the hood.
 var isInt = function (input) {
   return Math.floor(input) === input;
-}
+};
 ```
 
 </p>
@@ -371,7 +371,7 @@ var findDup = function (arr) {
       }
     } 
   }
-}
+};
 
 // or, more efficient version:
 var firstDup = function(arr){
@@ -385,7 +385,7 @@ var firstDup = function(arr){
       dups[val] = true;
     }
   }
-}
+};
 // the second one is more efficient because it only loops through the values once.
 // nested for loops loop through all the elements one time for each element in the array.
 ```
@@ -422,7 +422,7 @@ var isPangram = function (str) {
     }
   }
   return true;
-}
+};
 ```
 
 </p>
@@ -440,7 +440,7 @@ function outer(){
     var a = 5;
   }
   inner();
-}
+};
 
 outer();
 ```
@@ -497,7 +497,7 @@ var getDay = function (dayNum){
     default: 
       return undefined;
   }
-}
+};
 ```
 
 </p>
@@ -528,7 +528,7 @@ var deduper = function (numArr){
       newArr.push(numArr[i]);
     }
   }
-}
+};
 ```
 
 </p>
@@ -578,7 +578,7 @@ var isValidPass = function (password) {
   }
 
   return hasLower && hasUpper;
-}
+};
 ```
 
 </p>
@@ -609,7 +609,7 @@ var getNegative = function (numString) {
   }
 
   return negNum;
-}
+};
 ```
 
 </p>
@@ -643,7 +643,7 @@ var includes = function(arr, elem) {
   }
   
   return false;
-}
+};
 ```
 
 </p>
@@ -672,7 +672,7 @@ var double = function(arr) {
   }
 
   return newArr;
-}
+};
 ```
 
 </p>
@@ -707,7 +707,7 @@ var map = function(arr, cb) {
   }
   
   return newArr;
-}
+};
 ```
 
 </p>
@@ -745,7 +745,7 @@ var any = function(arr, cb) {
   }
   
   return isTrue;
-}
+};
 ```
 
 </p>
@@ -779,7 +779,7 @@ var filter = function(arr, cb) {
   }
   
   return newArr;
-}
+};
 ```
 
 </p>
@@ -828,7 +828,7 @@ var reverseDigit = function (num) {
   }
 
   return parseInt(newNum);
-}
+};
 
 // alternative way
 var reverseDigit = function (num) {
@@ -842,7 +842,7 @@ var reverseDigit = function (num) {
   }
 
   return newNum;
-}
+};
 ```
 
 </p>
@@ -875,12 +875,12 @@ var singleWord = function (str) {
   }
 
   return newStr.toLowerCase();
-}
+};
 
 // using regular expressions
 var singleWord = function (str){
   return str.toLowerCase().replace(/\s/g,'');
-}
+};
 ```
 
 </p>
@@ -901,7 +901,7 @@ var unique = function(arr) {
   return arr.filter(function (value, index, self) { 
     return self.indexOf(value) === index;
   });
-}
+};
 ```
 
 </p>
@@ -918,7 +918,7 @@ flipSentence('I love JS');  // should return 'JS love I'
 ```js
 var flipSentence = function(str) {
   return str.split(" ").reverse().join(" ");
-}
+};
 ```
 
 </p>
@@ -1053,7 +1053,7 @@ const getBoundarySum = function(arr) {
     }
   }
   return sum;
-}
+};
 ```
 
 </p>
@@ -1095,7 +1095,7 @@ const getBoundaryElems = function(arr) {
     str += "\n";
   }
   return str;
-}
+};
 ```
 
 </p>
