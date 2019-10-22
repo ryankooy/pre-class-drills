@@ -1100,3 +1100,36 @@ const getBoundaryElems = function(arr) {
 
 </p>
 </details>
+
+
+### 32. Create a function that passes the following test cases:
+```js
+console.log(calc(3,2,4));   // returns 2
+console.log(calc(5,1,3));   // returns 2 
+console.log(calc(5)(1)(3)); //returns 2
+console.log(calc());        //returns 0
+
+```
+
+<details><summary><b>Answer</b></summary>
+<p>
+
+```js
+const calc = function(a, b, c) {
+  if(a && b && c) {
+    return (a * b) - c;
+  } else if(a && !b && !c) {
+    return function(b) {
+      return function (c) {
+        return (a * b) - c;
+      }
+    }
+  } else {
+    return 0;
+  }
+};
+};
+```
+
+</p>
+</details>
