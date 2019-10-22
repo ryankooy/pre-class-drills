@@ -1187,8 +1187,8 @@ const dirTree = {
     }
   ]
 };
-getLevel(dirTree, 2).join(', '); // My Documents, My Pictures
-getLevel(dirTree, 3).join(', '); // resume.pdf, workStuff.xls, readme.txt, Empty directory, vacation01.jpg, vacation02.jpg
+getLevel(dirTree, 2); // My Documents, My Pictures
+getLevel(dirTree, 3); // resume.pdf, workStuff.xls, readme.txt, Empty directory, vacation01.jpg, vacation02.jpg
 ```
 
 <details><summary><b>Answer</b></summary>
@@ -1213,7 +1213,7 @@ const getLevel = function(tree, level) {
     return result;
   }
 
-  return getLevelRecursive([tree], 1, level);
+  return getLevelRecursive([tree], 1, level).join(', ');
 };
 ```
 
