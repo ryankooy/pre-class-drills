@@ -1102,12 +1102,12 @@ const getBoundaryElems = function(arr) {
 </details>
 
 
-### 32. Create a function that passes the following test cases:
+### 32. Create a "calc" function that passes the following test cases:
 ```js
-console.log(calc(3,2,4));   // returns 2
-console.log(calc(5,1,3));   // returns 2 
-console.log(calc(5)(1)(3)); //returns 2
-console.log(calc());        //returns 0
+calc(3,2,4);   // returns 2
+calc(5,1,3);   // returns 2 
+calc(5)(1)(3); // returns 2
+calc();        // returns 0
 
 ```
 
