@@ -1101,14 +1101,12 @@ const getBoundaryElems = function(arr) {
 </p>
 </details>
 
-
-### 32. Create a "calc" function that passes the following test cases:
+### 32. Write a function named `calc` that satisfies the following test cases:
 ```js
 calc(3,2,4);   // returns 2
 calc(5,1,3);   // returns 2 
 calc(5)(1)(3); // returns 2
 calc();        // returns 0
-
 ```
 
 <details><summary><b>Answer</b></summary>
@@ -1128,6 +1126,38 @@ const calc = function(a, b, c) {
     return 0;
   }
 };
+```
+
+</p>
+</details>
+
+### 33. Write a function named `calc` that satisfies the following test cases:
+```js
+calc().add(1).add(1).subtract(1).print();  // returns 1
+calc().add(1).subtract(1).print();         // returns 0
+calc().add(1).add(1).print();              // returns 2
+calc().print();                            // returns 0
+```
+
+<details><summary><b>Answer</b></summary>
+<p>
+
+```js
+const calc = function() {
+  var sum = 0;
+  return {
+    add: function(num) {
+      sum = sum + num;
+      return this;
+    },
+    subtract: function(num) {
+      sum = sum - num;
+      return this;
+    },
+    print: function() {
+      console.log(sum);
+    }
+  }
 };
 ```
 
