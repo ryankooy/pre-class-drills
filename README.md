@@ -335,7 +335,9 @@ Output: false
 var isInt = function (input) {
   return parseInt(input) === input;
 }
-// this is preferable since the first one actually won't work for very large numbers because of the way parseInt works under the hood.
+
+// this is preferable since the first one actually won't work for very large numbers 
+// because of the way parseInt works under the hood.
 var isInt = function (input) {
   return Math.floor(input) === input;
 }
@@ -476,13 +478,32 @@ Output: undefined
 <p>
 
 ```js
-  
+var getDay = function (dayNum){
+  switch(dayNum){
+    case 1: 
+      return 'Monday';
+    case 2: 
+      return 'Tuesday';
+    case 3: 
+      return 'Wednesday';
+    case 4: 
+      return 'Thursday';
+    case 5: 
+      return 'Friday';
+    case 6: 
+      return 'Saturday';
+    case 7: 
+      return 'Sunday';
+    default: 
+      return undefined;
+  }
+}
 ```
 
 </p>
 </details>
 
-### 14. Write a function that takes in an array of integers and the array with duplicates removed.
+### 14. Write a function that takes in an array of integers and return the array with duplicates removed.
 ```
 Ex:
 Input: [1,2,2,3]
@@ -499,7 +520,15 @@ Output: [1,2,3,5]
 <p>
 
 ```js
-  
+var deduper = function (numArr){
+  var newArr = [];
+
+  for (var i = 0; i < numArr.length; i++) {
+    if(!newArr.includes(numArr[i])) {
+      newArr.push(numArr[i]);
+    }
+  }
+}
 ```
 
 </p>
@@ -531,7 +560,25 @@ Output: false
 <p>
 
 ```js
-  
+var isValidPass = function (password) {
+  var hasLower = false;
+  var hasUpper = false;
+
+  if (password.length < 8){
+    return false;
+  }
+
+  for (var i = 0; i < password.length; i++) {
+    if (password[i].toLowerCase() === password[i]) {
+      hasLower = true;
+    }
+    if (password[i].toUpperCase() === password[i]) {
+      hasUpper = true;
+    }
+  }
+
+  return hasLower && hasUpper;
+}
 ```
 
 </p>
@@ -554,7 +601,15 @@ Error
 <p>
 
 ```js
-  
+var getNegative = function (numString) {
+  var negNum = numString * -1;
+
+  if (isNaN(negNum)) {
+    throw 'input must be coercible to a number';
+  }
+
+  return negNum;
+}
 ```
 
 </p>
@@ -580,7 +635,15 @@ Output: false
 <p>
 
 ```js
+var includes = function(arr, elem) {
+  for (var i = 0; i < arr.length; i++) {
+    if(elem === arr[i]) {
+      return true;
+    }
+  }
   
+  return false;
+}
 ```
 
 </p>
@@ -600,7 +663,16 @@ Output: [-2, -4, -6]
 <p>
 
 ```js
-  
+var double = function(arr) {
+  var newArr = [];
+
+  for (var i = 0; i < arr.length; i++) {
+    const newNum = arr[i] * 2;
+    newArr.push(newNum);
+  }
+
+  return newArr;
+}
 ```
 
 </p>
@@ -626,7 +698,16 @@ Output: [-1, 0, 1]
 <p>
 
 ```js
+var map = function(arr, cb) {
+  var newArr = [];
+
+  for (var i = 0; i < arr.length; i++) {
+    var newNum = cb(arr[i]);
+    newArr.push(newNum);
+  }
   
+  return newArr;
+}
 ```
 
 </p>
@@ -653,7 +734,18 @@ Output: false
 <p>
 
 ```js
+var any = function(arr, cb) {
+  var isTrue = false;
+
+  for (var i = 0; i < arr.length; i++) {
+    var cbOutput = cb(arr[i]);
+    if(cbOutput) {
+      isTrue = cbOutput;
+    }
+  }
   
+  return isTrue;
+}
 ```
 
 </p>
@@ -676,7 +768,18 @@ Output: [4,5,6]
 <p>
 
 ```js
+var filter = function(arr, cb) {
+  var newArr = [];
+
+  for (var i = 0; i < arr.length; i++) {
+    var cbOutput = cb(arr[i]);
+    if(cbOutput) {
+      newArr.push(arr[i]);
+    }
+  }
   
+  return newArr;
+}
 ```
 
 </p>
@@ -687,6 +790,17 @@ Output: [4,5,6]
 
 * Don't copy a definition from a Google Search, but instead read several articles and come up with your own definition.
 
+<details><summary><b>Answer</b></summary>
+<p>
+
+* Prototypes hold properties and methods that all objects of that type can access.
+
+* For example, the Array prototype has the push, map, any, filter, and includes methods. That's why every array can use those methods.
+
+* The prototype can be thought of as a centralized storage place for functionality that all objects of a type share access to.
+
+</p>
+</details>
 
 ### 23. Write a function that takes in a number and reverses the order of the digits.
 ```
@@ -705,7 +819,30 @@ Output: 4
 <p>
 
 ```js
+var reverseDigit = function (num) {
+  var newNum = '';
+  var numStr = num.toString();
   
+  for (var i = numStr.length - 1 ; i >= 0; i--) {
+    newNum += numStr[i];
+  }
+
+  return parseInt(newNum);
+}
+
+// alternative way
+var reverseDigit = function (num) {
+  var newNum = 0;
+  var lastDigit;
+
+  while (num > 0) {
+    lastDigit = num % 10;
+    newNum = (newNum * 10) + lastDigit;
+    num = parseInt(num / 10);
+  }
+
+  return newNum;
+}
 ```
 
 </p>
@@ -728,32 +865,28 @@ Output: oneword
 <p>
 
 ```js
-  
+var singleWord = function (str) {
+  var newStr = '';
+
+  for (var i = 0; i < str.length; i++) {
+    if (str[i] !== ' ') {
+      newStr += str[i];
+    }
+  }
+
+  return newStr.toLowerCase();
+}
+
+// using regular expressions
+var singleWord = function (str){
+  return str.toLowerCase().replace(/\s/g,'');
+}
 ```
 
 </p>
 </details>
 
-### 25. Using code, please demonstrate an asynchronous call in JavaScript?
-
-### 26. Write a function that takes in an input array and returns an output array duplicate of the input in the reverse order.
-```
-Ex:
-Input: [1, 2, 3, 4, 5]
-Output: [1, 2, 3, 4, 5, 5, 4, 3, 2, 1]
-```
-
-<details><summary><b>Answer</b></summary>
-<p>
-
-```js
-  
-```
-
-</p>
-</details>
-
-### 27. Write a function that takes in an input array and returns the unique items in an array.
+### 25. Write a function that takes in an input array and returns the unique items in an array.
 ```
 Ex:
 Input: [1, 3, 3, 4, 5, 1, 6, 1]
@@ -764,28 +897,17 @@ Output: [4, 5, 6]
 <p>
 
 ```js
-  
+var unique = function(arr) {
+  return arr.filter(function (value, index, self) { 
+    return self.indexOf(value) === index;
+  });
+}
 ```
 
 </p>
 </details>
 
-### 28. How to change the value of y in the object below:
-```js
-let x = { a: 1, b: [{ c: 1 }, { y: 2 }] };
-```
-
-<details><summary><b>Answer</b></summary>
-<p>
-
-```js
-  
-```
-
-</p>
-</details>
-
-### 29. Make the following function work:
+### 26. Make the following function work:
 ```js
 flipSentence('I love JS');  // should return 'JS love I'
 ```
@@ -794,24 +916,25 @@ flipSentence('I love JS');  // should return 'JS love I'
 <p>
 
 ```js
-  
+var flipSentence = function(str) {
+  return str.split(" ").reverse().join(" ");
+}
 ```
 
 </p>
 </details>
 
-### 30. Solve the issue in the following example:
+### 27. Solve the issue in the following example:
 ```js
 let profile = {
   name: 'Alex',
-  getName() {
-    let innerGetName = function(){
+  getName: function() {
+    let innerGetName = function() {
       return this.name;
     }
     return innerGetName();
   }
 };
-
 
 console.log(profile.getName());
 ```
@@ -820,13 +943,21 @@ console.log(profile.getName());
 <p>
 
 ```js
-  
+let profile = {
+  name: 'Alex',
+  getName: function() {
+    let innerGetName = () => {
+      return this.name;
+    }
+    return innerGetName();
+  }
+};
 ```
 
 </p>
 </details>
 
-### 31. Make the following statement work:
+### 28. Make the following statement work:
 ```js
 [1,2,3,4,5].duplicator(); // should return [1,2,3,4,5,1,2,3,4,5]
 ```
@@ -835,7 +966,34 @@ console.log(profile.getName());
 <p>
 
 ```js
-  
+Array.prototype.duplicator = function() {
+  return [...this, ...this];
+};
+```
+
+</p>
+</details>
+
+### 29. Write a function that takes in a sentence as a string and outputs the number of words.
+```
+Ex:
+Input: “let’s go!”
+Output: 2
+
+Input: “I can’t wait to start coding”
+Output: 6
+
+Input: “huh?”
+Output: 1
+```
+
+<details><summary><b>Answer</b></summary>
+<p>
+
+```js
+var wordCount = function(str) {
+  return str.trim().split(" ").length;
+};
 ```
 
 </p>
