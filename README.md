@@ -1144,7 +1144,7 @@ calc().print();                            // returns 0
 
 ```js
 const calc = function() {
-  var sum = 0;
+  let sum = 0;
   return {
     add: function(num) {
       sum = sum + num;
