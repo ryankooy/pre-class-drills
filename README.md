@@ -998,3 +998,63 @@ var wordCount = function(str) {
 
 </p>
 </details>
+
+### 30. For a given symmetric matrix of M by N, where all elements are numbers, calculate the sum of all the boundary elements.
+```
+Ex:
+Input:
+[
+  [1, 1, 1],
+  [1, 2, 1],
+  [1, 1, 1]
+]
+Output: 8
+
+Input:
+[
+  [1, 1, 1, 1],
+  [1, 2, 2, 1],
+  [1, 1, 1, 1]
+]
+Output: 10
+
+Input:
+[
+  [ 1, 2, 3, 4 ],
+  [ 5, 6, 7, 8 ],
+  [ 1, 2, 3, 4 ],
+  [ 5, 6, 7, 8 ],
+  [ 1, 2, 3, 4 ]
+]
+Output: 51
+
+Input:
+[
+  [1]
+]
+Output: 1
+
+```
+
+<details><summary><b>Answer</b></summary>
+<p>
+
+```js
+const getBoundarySum = function(arr) {
+  let m = arr.length;
+  let n = arr[0].length;
+  let sum = 0;
+  
+  for (let i = 0; i < m; i++) {
+    for (let j = 0; j < n; j++) {
+      if (i === 0 || j === 0 || i === m - 1 || j === n - 1) {
+        sum += arr[i][j];
+      }
+    }
+  }
+  return sum;
+}
+```
+
+</p>
+</details>
