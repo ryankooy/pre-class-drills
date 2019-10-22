@@ -1163,3 +1163,59 @@ const calc = function() {
 
 </p>
 </details>
+
+### 34. Given the data structure dirTree, which represents a directory tree, write a function `getLevel(tree, level)` that prints to the console all the node names at a particular depth in the tree.
+```js
+const dirTree = {
+  name: 'Home',
+  children: [
+    {
+      name: 'My Documents', 
+      children: [
+        { name: 'resume.pdf' },
+        { name: 'workStuff.xls' },
+        { name: 'readme.txt' },
+        { name: 'Empty directory', children: [] }
+      ]
+    },
+    {
+      name: 'My Pictures',
+      children: [
+        { name: 'vacation01.jpg' },
+        { name: 'vacation02.jpg' },
+      ]
+    }
+  ]
+};
+getLevel(dirTree, 2).join(', '); // My Documents, My Pictures
+getLevel(dirTree, 3).join(', '); // resume.pdf, workStuff.xls, readme.txt, Empty directory, vacation01.jpg, vacation02.jpg
+```
+
+<details><summary><b>Answer</b></summary>
+<p>
+
+```js
+const getLevel = function(tree, level) {
+  function getLevelRecursive(items, currentLevel, targetLevel) {
+    const root = items || [];
+    let result = [];
+  
+    if(currentLevel === targetLevel) {
+      return root.map(function(child) {
+        return child.name;
+      });
+    } else {
+      root.forEach(function(child) {
+        result = result.concat(getLevelRecursive(child.children, currentLevel + 1, targetLevel));
+      });
+    }
+    
+    return result;
+  }
+
+  return getLevelRecursive([tree], 1, level);
+};
+```
+
+</p>
+</details>
