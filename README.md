@@ -1058,3 +1058,45 @@ const getBoundarySum = function(arr) {
 
 </p>
 </details>
+
+### 31. For a given symmetric matrix of M by N, where all elements are numbers, print only the boundary elements.
+```
+Ex:
+Input:
+[
+  [1, 2, 4],
+  [3, 2, 6],
+  [2, 1, 9]
+]
+Output:
+1 2 4
+3   6
+2 1 9
+
+```
+
+<details><summary><b>Answer</b></summary>
+<p>
+
+```js
+const getBoundaryElems = function(arr) {
+  let m = arr.length;
+  let n = arr[0].length;
+  let str = "";
+  
+  for (let i = 0; i < m; i++) {
+    for (let j = 0; j < n; j++) {
+      if (i === 0 || j === 0 || i === m - 1 || j === n - 1) {
+        str += arr[i][j] + " ";
+      } else {
+        str += "  ";
+      }
+    }
+    str += "\n";
+  }
+  return str;
+}
+```
+
+</p>
+</details>
