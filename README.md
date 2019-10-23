@@ -1219,3 +1219,37 @@ const getLevel = function(tree, level) {
 
 </p>
 </details>
+
+
+### 35. Given two input values, an array of integers of finite length, sorted in ascending order, of which numbers can repeat, and a sum which is an integer number greater than 0. Find 2 values in the array which added to each other would equal to the sum given. Optimize your code with performance in mind. Can you do it with only one loop?
+```
+Ex:
+
+Input: 
+[1, 2, 3, 4, 5]
+8
+
+Output:
+[3, 5]
+```
+
+<details><summary><b>Answer</b></summary>
+<p>
+
+```js
+const sumPair = function(input, sum) {
+  for (let i = 0, e = input.length - 1; i < e;) {
+    if (i >= e) return null;
+    let sumTest = input[i] + input[e];
+    if(sumTest === sum) {
+      return [input[i], input[e]];
+      break;
+    }
+    if(sumTest < sum) i++;
+    else if(sumTest > sum) e--;
+  }
+};
+```
+
+</p>
+</details>
